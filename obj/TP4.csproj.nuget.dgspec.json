@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "Z:\\4°\\programacion\\TP4\\TP4.csproj": {}
+    "Z:\\4°\\programacion\\TP4_Berenstein_Dujovne\\TP4\\TP4.csproj": {}
   },
   "projects": {
-    "Z:\\4°\\programacion\\TP4\\TP4.csproj": {
+    "Z:\\4°\\programacion\\TP4_Berenstein_Dujovne\\TP4\\TP4.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "Z:\\4°\\programacion\\TP4\\TP4.csproj",
+        "projectUniqueName": "Z:\\4°\\programacion\\TP4_Berenstein_Dujovne\\TP4\\TP4.csproj",
         "projectName": "TP4",
-        "projectPath": "Z:\\4°\\programacion\\TP4\\TP4.csproj",
+        "projectPath": "Z:\\4°\\programacion\\TP4_Berenstein_Dujovne\\TP4\\TP4.csproj",
         "packagesPath": "C:\\Users\\49836363\\.nuget\\packages\\",
-        "outputPath": "Z:\\4°\\programacion\\TP4\\obj\\",
+        "outputPath": "Z:\\4°\\programacion\\TP4_Berenstein_Dujovne\\TP4\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -49,6 +49,16 @@
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
+          "dependencies": {
+            "Microsoft.Data.SqlClient": {
+              "target": "Package",
+              "version": "[7.0.2, )"
+            },
+            "dapper": {
+              "target": "Package",
+              "version": "[2.1.79, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

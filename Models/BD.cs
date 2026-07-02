@@ -19,16 +19,64 @@ public class BD
         return sobre;
     }
 
+    
     public static void ConfirmarSobre(List<Jugadores> sobre)
     {
-        for(int i=0; i<sobre.Count; i++)
-        {
+        List<Figuritas> coleccion = ObtenerFiguritas();
 
-        }       
-        string query = "UPDATE Turnos SET Estado = @pNuevoEstado WHERE id=@pId";
+        for (int i = 0; i < sobre.Count; i++)
+        {
+            bool existe = false;
+
+        do
+        {
+            if (sobre[i].Id == coleccion[j].JugadorId)
+            {
+                existe = true;
+                ActualizarCantidad(sobre[i].Id);
+            }
+            else
+            {
+                j++;
+            }
+
+        } while (!existe && j < coleccion.Count);
+
+
+            if (!existe)
+            {
+                AgregarFigurita(sobre[i].Id);
+            }
+        }
+    }    
+           
+    
+    public static List<Figuritas> ObtenerFiguritas()
+    {
+        List<Figuritas> coleccion = new List<Figuritas>();
         using(SqlConnection connection = new SqlConnection(connectionString))
         {
-            connection.Execute(query, new{ pId = id, pNuevoEstado = nuevoEstado} );
+            string query = "SELECT * FROM Figuritas";
+            coleccion = connection.Query<Figuritas>(query).ToList();
+        }
+        return coleccion;
+    }
+    public static void ActualizarCantidad(int idJugador)
+    {
+        using (SqlConnection connection = new SqlConnection(connectionString))
+        {
+            string query = @"UPDATE Figuritas SET Cantidad = Cantidad + 1 WHERE JugadorId = @pIdJugador";
+
+            connection.Execute(query, new { @pIdJugador = idJugador });
+        }
+    }
+    public static void AgregarFigurita(int idJugador)
+    {
+        using (SqlConnection connection = new SqlConnection(connectionString))
+        {
+            string query = @"INSERT INTO Figuritas (JugadorId, Cantidad) VALUES (@idJugador, 1)";
+
+            connection.Execute(query, new { @pIdJugador = IidJugadord });
         }
     }
 

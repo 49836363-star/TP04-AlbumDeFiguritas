@@ -1,0 +1,10 @@
+Z:\4°\programacion\TP4_Berenstein_Dujovne\TP4\obj\Debug\net9.0\TP4.csproj.AssemblyReference.cache
+Z:\4°\programacion\TP4_Berenstein_Dujovne\TP4\obj\Debug\net9.0\rpswa.dswa.cache.json
+Z:\4°\programacion\TP4_Berenstein_Dujovne\TP4\obj\Debug\net9.0\TP4.GeneratedMSBuildEditorConfig.editorconfig
+Z:\4°\programacion\TP4_Berenstein_Dujovne\TP4\obj\Debug\net9.0\TP4.AssemblyInfoInputs.cache
+Z:\4°\programacion\TP4_Berenstein_Dujovne\TP4\obj\Debug\net9.0\TP4.AssemblyInfo.cs
+Z:\4°\programacion\TP4_Berenstein_Dujovne\TP4\obj\Debug\net9.0\TP4.csproj.CoreCompileInputs.cache
+Z:\4°\programacion\TP4_Berenstein_Dujovne\TP4\obj\Debug\net9.0\TP4.MvcApplicationPartsAssemblyInfo.cache
+Z:\4°\programacion\TP4_Berenstein_Dujovne\TP4\obj\Debug\net9.0\TP4.RazorAssemblyInfo.cache
+Z:\4°\programacion\TP4_Berenstein_Dujovne\TP4\obj\Debug\net9.0\TP4.RazorAssemblyInfo.cs
+Z:\4°\programacion\TP4_Berenstein_Dujovne\TP4\obj\Debug\net9.0\TP4.sourcelink.json

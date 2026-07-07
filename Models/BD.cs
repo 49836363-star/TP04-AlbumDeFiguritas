@@ -1,4 +1,4 @@
-namespace TP4;
+namespace TP4.Models;
 using Dapper;
 using Microsoft.Data.SqlClient;
 using TP4;
@@ -27,10 +27,11 @@ public class BD
         for (int i = 0; i < sobre.Count; i++)
         {
             bool existe = false;
-
+            int j=0; 
         do
         {
-            if (sobre[i].Id == coleccion[j].JugadorId)
+           
+            if (sobre[i].Id == coleccion[j].IDjugador)
             {
                 existe = true;
                 ActualizarCantidad(sobre[i].Id);
@@ -76,7 +77,7 @@ public class BD
         {
             string query = @"INSERT INTO Figuritas (JugadorId, Cantidad) VALUES (@idJugador, 1)";
 
-            connection.Execute(query, new { @pIdJugador = IidJugadord });
+            connection.Execute(query, new { idJugador });
         }
     }
 

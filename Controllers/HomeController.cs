@@ -18,6 +18,26 @@ public class HomeController : Controller
         return View();
     }
 
+    public IActionResult AbrirSobre()
+    {
+        List<Jugadores> sobre = BD.AbrirSobre();
+        ViewBag.Sobre = sobre;
+        return View();
+    }
+    [HttpPost]
+    public IActionResult ConfirmarSobre(List<int> IdJugadores)
+    {
+        BD.ConfirmarSobre(sobre);
+        return RedirectToAction("Album");
+    }
+
+    public IActionResult Album()
+    {
+        ViewBag.Coleccion = BD.ObtenerFiguritas();
+
+        return View();
+    }
+
     public IActionResult Privacy()
     {
         return View();

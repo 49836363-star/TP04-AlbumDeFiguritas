@@ -20,33 +20,35 @@ public class BD
     }
 
     
-    public static void ConfirmarSobre(List<Jugadores> sobre)
+    public static void ConfirmarSobre(List<int> idJugadores)
     {
         List<Figuritas> coleccion = ObtenerFiguritas();
 
-        for (int i = 0; i < sobre.Count; i++)
+        for (int i = 0; i < idJugadores.Count; i++)
         {
             bool existe = false;
-            int j=0; 
-        do
-        {
-           
-            if (sobre[i].Id == coleccion[j].IDjugador)
+            if (coleccion.Count > 0)
             {
-                existe = true;
-                ActualizarCantidad(sobre[i].Id);
-            }
-            else
-            {
-                j++;
-            }
+                int j = 0;
 
-        } while (!existe && j < coleccion.Count);
+                do
+                {
+                    if (idJugadores[i] == coleccion[j].IDjugador)
+                    {
+                        existe = true;
+                        ActualizarCantidad(idJugadores[i]);
+                    }
+                    else
+                    {
+                        j++;
+                    }
 
+                } while (!existe && j < coleccion.Count);
+            }
 
             if (!existe)
             {
-                AgregarFigurita(sobre[i].Id);
+                AgregarFigurita(idJugadores[i]);
             }
         }
     }    
@@ -66,7 +68,7 @@ public class BD
     {
         using (SqlConnection connection = new SqlConnection(connectionString))
         {
-            string query = @"UPDATE Figuritas SET Cantidad = Cantidad + 1 WHERE JugadorId = @pIdJugador";
+            string query = @"UPDATE Figuritas SET Cantidad = Cantidad + 1 WHERE IDjugador = @pIdJugador";
 
             connection.Execute(query, new { @pIdJugador = idJugador });
         }
@@ -75,7 +77,7 @@ public class BD
     {
         using (SqlConnection connection = new SqlConnection(connectionString))
         {
-            string query = @"INSERT INTO Figuritas (JugadorId, Cantidad) VALUES (@idJugador, 1)";
+            string query = @"INSERT INTO Figuritas (IDjugador, Cantidad) VALUES (@idJugador, 1)";
 
             connection.Execute(query, new { idJugador });
         }

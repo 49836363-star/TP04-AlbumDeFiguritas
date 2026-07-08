@@ -25,9 +25,9 @@ public class HomeController : Controller
         return View();
     }
     [HttpPost]
-    public IActionResult ConfirmarSobre(List<Jugadores> sobre)
+    public IActionResult ConfirmarSobre(List<int> idJugadores)
     {
-        BD.ConfirmarSobre(sobre);
+        BD.ConfirmarSobre(idJugadores);
         return RedirectToAction("Album");
     }
 

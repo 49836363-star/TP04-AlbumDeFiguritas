@@ -25,7 +25,7 @@ public class HomeController : Controller
         return View();
     }
     [HttpPost]
-    public IActionResult ConfirmarSobre(List<int> IdJugadores)
+    public IActionResult ConfirmarSobre(List<Jugadores> sobre)
     {
         BD.ConfirmarSobre(sobre);
         return RedirectToAction("Album");
@@ -33,8 +33,8 @@ public class HomeController : Controller
 
     public IActionResult Album()
     {
-        ViewBag.Coleccion = BD.ObtenerFiguritas();
-
+        List<Figuritas> album=BD.ObtenerFiguritas();
+        ViewBag.Album = album; 
         return View();
     }
 

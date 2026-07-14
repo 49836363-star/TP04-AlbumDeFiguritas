@@ -34,7 +34,9 @@ public class HomeController : Controller
     public IActionResult Album()
     {
         List<Figuritas> album=BD.ObtenerFiguritas();
+        List<Jugadores> jugadores = BD.ObtenerJugadores();
         ViewBag.Album = album; 
+        ViewBag.Jugadores = jugadores;
         return View();
     }
 

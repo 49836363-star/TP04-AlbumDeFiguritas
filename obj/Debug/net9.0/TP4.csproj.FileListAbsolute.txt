@@ -66,7 +66,6 @@ Z:\4°\programacion\TP4_Berenstein_Dujovne\TP4\obj\Debug\net9.0\rjsmcshtml.dswa.
 Z:\4°\programacion\TP4_Berenstein_Dujovne\TP4\obj\Debug\net9.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
 Z:\4°\programacion\TP4_Berenstein_Dujovne\TP4\obj\Debug\net9.0\scopedcss\bundle\TP4.styles.css
 Z:\4°\programacion\TP4_Berenstein_Dujovne\TP4\obj\Debug\net9.0\scopedcss\projectbundle\TP4.bundle.scp.css
-Z:\4°\programacion\TP4_Berenstein_Dujovne\TP4\obj\Debug\net9.0\compressed\6z9hs4kepy-b9sayid5wm.gz
 Z:\4°\programacion\TP4_Berenstein_Dujovne\TP4\obj\Debug\net9.0\compressed\cxz6kv13fq-61n19gt1b8.gz
 Z:\4°\programacion\TP4_Berenstein_Dujovne\TP4\obj\Debug\net9.0\compressed\5qu09n3ipi-xtxxf3hu2r.gz
 Z:\4°\programacion\TP4_Berenstein_Dujovne\TP4\obj\Debug\net9.0\compressed\cprilqoq6i-bqjiyaj88i.gz
@@ -170,3 +169,4 @@ Z:\4°\programacion\TP4_Berenstein_Dujovne\TP4\obj\Debug\net9.0\compressed\8y05w
 Z:\4°\programacion\TP4_Berenstein_Dujovne\TP4\obj\Debug\net9.0\compressed\4glyou6suf-4edj96wesq.gz
 Z:\4°\programacion\TP4_Berenstein_Dujovne\TP4\obj\Debug\net9.0\compressed\wg1unpa9j4-aadqzmnxhn.gz
 Z:\4°\programacion\TP4_Berenstein_Dujovne\TP4\obj\Debug\net9.0\compressed\tsi2ov5q90-m3x4wnyq1k.gz
+Z:\4°\programacion\TP4_Berenstein_Dujovne\TP4\obj\Debug\net9.0\compressed\6z9hs4kepy-3j555k7ace.gz

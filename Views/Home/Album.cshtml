@@ -1,21 +1,34 @@
 <h1>Mi Álbum</h1>
 
-@foreach(Figuritas figurita in ViewBag.Album)
-{
     @foreach(Jugadores jugador in ViewBag.Jugadores)
     {
-        @if(figurita.IDjugador == jugador.Id)
+        bool encontrada = false;
+        int cantidad = 0;
+
+        @foreach(Figuritas figurita in ViewBag.Album)
+        {
+            if(figurita.IDjugador == jugador.Id)
+            {
+                encontrada = true;
+                cantidad = figurita.cantidad;
+            }
+        }
+
+        if(encontrada)
         {
             <div class="figurita">
-
-                <img src="/images/jugadores/@(jugador.nombre.ToLower()).svg"/>
-                <p class="cantidad"> Cantidad: @figurita.cantidad </p>
-
+                <img src="/images/jugadores/@(jugador.nombre.ToLower()).svg" />
+                <p>Cantidad: @cantidad</p>
+            </div>
+        }
+        else
+        {
+            <div class="figurita">
+                <img class="gris" src="/images/jugadores/@(jugador.nombre.ToLower()).svg" />
+                <p>Sin conseguir</p>
             </div>
         }
     }
-}
-
-<br />
+    <br />
 
 <a href='@Url.Action("Index","Home")'>Volver a la pagina principal</a>

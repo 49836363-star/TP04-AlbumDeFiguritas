@@ -1,31 +1,68 @@
-html {
-  font-size: 14px;
+body
+{
+    background-color: #f2f2f2;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
 }
 
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+h1
+{
+    color: darkblue;
+    margin-top: 20px;
 }
 
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+a
+{
+    text-decoration: none;
+    color: white;
+    background-color: royalblue;
+    padding: 10px 20px;
+    border-radius: 8px;
+    margin: 10px;
 }
 
-html {
-  position: relative;
-  min-height: 100%;
+a:hover
+{
+    background-color: rgb(35, 82, 223);
 }
 
-body {
-  margin-bottom: 60px;
+input[type=submit]
+{
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
 }
 
-.form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
-  color: var(--bs-secondary-color);
-  text-align: end;
+input[type=submit]:hover
+{
+    background-color: darkgreen;
 }
 
-.form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
-  text-align: start;
+.figurita
+{
+    display: inline-block;
+    width: 220px;
+    margin: 15px;
+    padding: 10px;
+    border: 2px solid gray;
+    border-radius: 10px;
+    background-color: white;
+    text-align: center;
+}
+
+.figurita img
+{
+    width: 180px;
+    height: 250px;
+}
+
+.cantidad
+{
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
 }

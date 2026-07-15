@@ -39,6 +39,11 @@ public class HomeController : Controller
         ViewBag.Jugadores = jugadores;
         return View();
     }
+    public IActionResult ReiniciarAlbum()
+    {
+        BD.ReiniciarAlbum();
+        return RedirectToAction("Index");
+    }
 
     public IActionResult Privacy()
     {

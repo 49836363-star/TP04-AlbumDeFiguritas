@@ -1,13 +1,21 @@
+<h1>Mi Álbum</h1>
+
 @foreach(Figuritas figurita in ViewBag.Album)
 {
     @foreach(Jugadores jugador in ViewBag.Jugadores)
     {
         @if(figurita.IDjugador == jugador.Id)
         {
-            <img src="/images/jugadores/@jugador.Imagen" width="150" />
+            <div class="figurita">
 
-            <p>Cantidad: @figurita.cantidad</p>
+                <img src="/images/jugadores/@(jugador.nombre.ToLower()).svg"/>
+                <p class="cantidad"> Cantidad: @figurita.cantidad </p>
+
+            </div>
         }
     }
 }
-<a href='@Url.Action("Index", "Home")'>Volver a la pagina principal</a>
+
+<br />
+
+<a href='@Url.Action("Index","Home")'>Volver a la pagina principal</a>

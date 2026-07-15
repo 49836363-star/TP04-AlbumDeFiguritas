@@ -1,16 +1,13 @@
 <form action="@Url.Action("ConfirmarSobre","Home")" method="post">
 
-@foreach (Jugadores jugador in ViewBag.Sobre)
-{
-<input type="hidden" name="IdJugadores" value="@jugador.Id" />
-
-    <p>@jugador.nombre</p>
-    <p>@jugador.posicion</p>
-    <p>@jugador.numeroCamiseta</p>
-    <p>----------------------------</p>
-
-}
-
-<input type="submit" value="Confirmar Sobre"/>
+    @foreach(Jugadores jugador in ViewBag.Sobre)
+    {
+        <div class="figurita">
+            <input type="hidden" name="IdJugadores" value="@jugador.Id"/>
+            <img src="/images/jugadores/@(jugador.nombre.ToLower()).svg"/>
+        </div>
+    }
+    <br />
+    <input type="submit" value="Confirmar Sobre"/>
 
 </form>

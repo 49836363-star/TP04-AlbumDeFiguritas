@@ -51,7 +51,17 @@ public class BD
                 AgregarFigurita(idJugadores[i]);
             }
         }
-    }    
+    } 
+    public static List<Jugadores> ObtenerJugadores()
+    {
+        List<Jugadores> jugadores = new List<Jugadores>();
+        using(SqlConnection connection = new SqlConnection(connectionString))
+        {
+            string query = "SELECT * FROM Jugadores";
+            jugadores = connection.Query<Jugadores>(query).ToList();
+        }
+        return jugadores;
+    }   
            
     
     public static List<Figuritas> ObtenerFiguritas()
@@ -80,6 +90,15 @@ public class BD
             string query = @"INSERT INTO Figuritas (IDjugador, Cantidad) VALUES (@idJugador, 1)";
 
             connection.Execute(query, new { idJugador });
+        }
+    }
+    public static void ReiniciarAlbum()
+    {
+        using(SqlConnection connection = new SqlConnection(connectionString))
+        {
+            string query = "DELETE FROM Figuritas";
+
+            connection.Execute(query);
         }
     }
 
